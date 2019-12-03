@@ -33,7 +33,7 @@ FAQ
 期末总结
 ```
 
-[1. Python简介](\1. Python简介\1.md)
+[1. Python简介](learn-python-lxf-1\1. Python简介\1.md)
 
 
 
