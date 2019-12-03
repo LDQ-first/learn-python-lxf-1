@@ -1,0 +1,21 @@
+{
+  "name": "learn-python-lxf-1",
+  "version": "1.0.0",
+  "description": "[Python教程](https://www.liaoxuefeng.com/wiki/1016959663602400)",
+  "main": "index.js",
+  "scripts": {
+    "gitadd": "git add . && git commit -m \"update\" ",
+    "git": "npm run gitadd && git push origin master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LDQ-first/learn-python-lxf-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LDQ-first/learn-python-lxf-1/issues"
+  },
+  "homepage": "https://github.com/LDQ-first/learn-python-lxf-1#readme"
+}
