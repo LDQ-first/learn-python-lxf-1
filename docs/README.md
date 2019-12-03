@@ -1,7 +1,7 @@
 ---
 lang: zh-cn
 home: true
-
+heroImage: img/
 
 ---
 
