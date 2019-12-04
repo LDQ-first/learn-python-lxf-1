@@ -1,6 +1,8 @@
 const webpack = require('webpack')
 const path = require('path')
 
+import getSiderbarConfig from './getSiderbarConfig'
+
 module.exports = {
     /* 基本配置 */
     title: 'Hello Python',
@@ -84,8 +86,75 @@ module.exports = {
             ],
             // navbar: false,  // 禁用所有页面的导航栏
             /* 侧边栏 */
-            sidebar: {
-                '/Python/': 
-            }
+            sidebar: getSiderbarConfig,
+
+            /* 显示所有页面的标题链接 */
+            displayAllHeaders: true, // 默认值：false
+            /* 活动的标题链接 */
+            activeHeaderLinks: false, // 默认值：true
+            /**
+             * 内置搜索 
+             * 
+             * 内置搜索只会为页面的标题、h2 和 h3 构建搜索索引
+             * 
+             * */
+            search: true,    // 默认的搜索框
+            searchMaxSuggestions: 10,  // 搜索结果数量
+            /**
+             * Algolia 搜索 
+             * 
+             * 全文搜索
+             * 
+             * 注意
+             * 不同于开箱即用的 内置搜索，
+             * Algolia 搜索 需要你在使用之前将你的网站提交给它们用于创建索引。
+             * 
+             * */
+             algolia: {
+                /*  apiKey: '<API_KEY>',
+                    indexName: '<INDEX_NAME>' */
+             },
+             /**
+             *  最后更新时间 
+             * 
+             * 使用须知
+             *  由于 lastUpdated 是基于 git 的, 
+             * 所以你只能在一个基于 git 的项目中启用它。
+             * 
+             * */
+             lastUpdated: 'Last Updated', 
+             /**
+             * Service Worker
+             * 
+             * 提示
+             * 请不要将本选项与 Config > serviceWorker 混淆，
+             * Config > serviceWorker 是网站级别的配置，
+             * 而本选项是主题级别的配置
+             * 
+             */
+            /**
+             * 刷新内容的弹窗 
+             * 
+             *  开启 themeConfig.serviceWorker.updatePopup 选项，
+             * 将开启一个能够刷新内容的弹窗。
+             * 当网站更新（即 Service Worker 更新）时，
+             * 它会提供一个 refresh 按钮，允许用户立刻刷新内容。
+             * 
+             * 提示
+             * 如果没有 refresh 按钮，
+             * 新的 service worker 将在所有的 clients 关闭后才会处于活动状态。
+             * 这意味着访问者在关闭你网站的所有标签之前将无法看到新内容。
+             * 但是，refresh 按钮可以立即激活新的 Service Worker。
+             * 
+             * 
+             */
+            serviceWorker: {
+                // updatePopup: true,  // Boolean | Object, 默认值是 undefined 
+                // 如果设置为 true, 默认的文本配置将是: 
+                updatePopup: { 
+                   message: "New content is available.", 
+                   buttonText: "Refresh" 
+                }
+              },
         }
 }
