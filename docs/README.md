@@ -1,8 +1,10 @@
 ---
 lang: zh-cn
 home: true
-heroImage: img/
-
+heroImage: img/python-logo.png
+actionText: learn Python
+actionLink: /Python/
+footer: MIT Licensed | Copyright © 2019-present LDQ-first
 ---
 
 # learn-python-lxf-1
