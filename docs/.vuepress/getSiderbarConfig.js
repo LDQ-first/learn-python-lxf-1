@@ -1,15 +1,7 @@
 
 
 
-const getSiderbarConfig = (title, children) => [
-    {
-        title,
-        collapsable: false,
-        children
-        // path: '/foo/',      // 可选的, 应该是一个绝对路径
-        // sidebarDepth: 1   // 可选的, 默认值是 1
-    }
-]
+
 
 
 const PythonFirstChildren = [
@@ -28,14 +20,26 @@ const PythonThirdChildren = [
 ]
 
 
-module.exports = {
-    '/1.Python简介/': getSiderbarConfig('1. Python简介', PythonFirstChildren),
-    '/2. 安装Python/': getSiderbarConfig('2. 安装Python', PythonSecondChildren),
-    '/3. 第一个Python程序': getSiderbarConfig('3. 第一个Python程序', PythonThirdChildren)
-}
+const getSiderbarConfig = (title) => [
+    {
+        title,
+        collapsable: false,
+        children: [
+            PythonFirstChildren,
+            PythonSecondChildren,
+            PythonThirdChildren
+        ]
+        // path: '/foo/',      // 可选的, 应该是一个绝对路径
+        // sidebarDepth: 1   // 可选的, 默认值是 1
+    }
+]
 
 module.exports = {
     '/Python/': [
-        
+        {
+            title: 'Python',
+            collapsable: false,
+            
+        }
     ]
 }
