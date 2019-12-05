@@ -2,9 +2,9 @@ const webpack = require('webpack')
 const path = require('path')
 
 // import getSiderbarConfig from './getSiderbarConfig'
-const getSiderbarConfig = require('./getSiderbarConfig')
+const setSiderbarConfig = require('./setSiderbarConfig')
 
-console.log(`getSiderbarConfig: `, getSiderbarConfig)
+console.log(`setSiderbarConfig: `, setSiderbarConfig)
 
 module.exports = {
     /* 基本配置 */
@@ -89,21 +89,21 @@ module.exports = {
         ],
         // navbar: false,  // 禁用所有页面的导航栏
         /* 侧边栏 */
-        /* sidebar: getSiderbarConfig, */
-        sidebar: {
+        sidebar: setSiderbarConfig,
+        /* sidebar: {
             '/Python/': [
                 {
                     title: 'Python',
                     collapsable: false,
                     children: [
                         ['1. Python简介/', '1. Python简介']
-                        /* '1. Python简介/' */
+                        // '1. Python简介/'
                     ]
                     // path: '/foo/',      // 可选的, 应该是一个绝对路径
                     // sidebarDepth: 1   // 可选的, 默认值是 1
                 }
             ]
-        },
+        }, */
 
         /* 显示所有页面的标题链接 */
         displayAllHeaders: true, // 默认值：false
