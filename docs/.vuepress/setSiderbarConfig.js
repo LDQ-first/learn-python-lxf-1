@@ -18,34 +18,54 @@ const PythonThirdChildren = [
 ]
 
 
-const setPythonSiderbarConfig = () => [
+/* const setPythonSiderbarConfig = () => [
     {
         title: '1. Python简介',
-        collapsable: false,
         children: PythonFirstChildren,
+        // collapsable: false,
         // path: '1. Python简介/',      // 可选的, 应该是一个绝对路径
         // sidebarDepth: 1   // 可选的, 默认值是 1
     },
     {
         title: '2. 安装Python',
-        collapsable: false,
         children: PythonSecondChildren,
+        // collapsable: false,
         // path: '2. 安装Python/',      // 可选的, 应该是一个绝对路径
         // sidebarDepth: 1   // 可选的, 默认值是 1
     },
     {
         title: '3. 第一个Python程序',
-        collapsable: false,
         children: PythonThirdChildren,
+        // collapsable: false,
         // path: '3. 第一个Python程序/',      // 可选的, 应该是一个绝对路径
         // sidebarDepth: 1   // 可选的, 默认值是 1
     },
+] */
+
+
+const setPythonNestedSiderbarConfig = (title) => [
+    {
+        title,
+        collapsable: true,
+        sidebarDepth: 2,
+        children: [
+            {
+                title: '1. Python简介',
+                children: PythonFirstChildren
+            },
+            {
+                title: '2. 安装Python',
+                children: PythonSecondChildren
+            },
+            {
+                title: '3. 第一个Python程序',
+                children: PythonThirdChildren
+            },
+        ]
+    }
 ]
 
 
-
-
-
 module.exports = {
-    '/Python/': setPythonSiderbarConfig()
+    '/Python/': setPythonNestedSiderbarConfig('Python 教程')
 }

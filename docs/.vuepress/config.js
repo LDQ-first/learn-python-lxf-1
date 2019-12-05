@@ -89,6 +89,7 @@ module.exports = {
         ],
         // navbar: false,  // 禁用所有页面的导航栏
         /* 侧边栏 */
+        // sidebar: 'auto',
         sidebar: setSiderbarConfig,
         /* sidebar: {
             '/Python/': [
