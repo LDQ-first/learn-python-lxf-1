@@ -23,5 +23,5 @@
 
 ## 运行Python
 
-![](../img/001.png)
+![](../../.vuepress/public/img/001.png)
 

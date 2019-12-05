@@ -3,7 +3,7 @@ lang: zh-cn
 home: true
 heroImage: img/python-logo.png
 actionText: learn Python
-actionLink: /Python/
+actionLink: /Python/1. Python简介/
 footer: MIT Licensed | Copyright © 2019-present LDQ-first
 ---
 
