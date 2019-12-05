@@ -18,7 +18,7 @@ const PythonThirdChildren = [
 ]
 
 
-/* const setPythonSiderbarConfig = () => [
+/* const setPythonSidebarConfig = () => [
     {
         title: '1. Python简介',
         children: PythonFirstChildren,
@@ -43,7 +43,7 @@ const PythonThirdChildren = [
 ] */
 
 
-const setPythonNestedSiderbarConfig = (title) => [
+const setPythonNestedSidebarConfig = (title) => [
     {
         title,
         collapsable: true,
@@ -67,5 +67,5 @@ const setPythonNestedSiderbarConfig = (title) => [
 
 
 module.exports = {
-    '/Python/': setPythonNestedSiderbarConfig('Python 教程')
+    '/Python/': setPythonNestedSidebarConfig('Python 教程')
 }

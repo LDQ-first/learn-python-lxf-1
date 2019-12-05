@@ -2,9 +2,9 @@ const webpack = require('webpack')
 const path = require('path')
 
 // import getSiderbarConfig from './getSiderbarConfig'
-const setSiderbarConfig = require('./setSiderbarConfig')
+const setSidebarConfig = require('./setSidebarConfig')
 
-console.log(`setSiderbarConfig: `, setSiderbarConfig)
+console.log(`setSidebarConfig: `, setSidebarConfig)
 
 module.exports = {
     /* 基本配置 */
@@ -90,7 +90,7 @@ module.exports = {
         // navbar: false,  // 禁用所有页面的导航栏
         /* 侧边栏 */
         // sidebar: 'auto',
-        sidebar: setSiderbarConfig,
+        sidebar: setSidebarConfig,
         /* sidebar: {
             '/Python/': [
                 {
